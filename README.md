@@ -2,12 +2,12 @@
 
 IDEs: Multi-IDE (CLion, DataGrip, GoLand, IntelliJ, PhpStorm, PyCharm, Rider, RubyMine, RustRover, WebStorm)
 Stack: Python, Go, Rust, TypeScript, Java, C++, SQL - processamento de dados reais NASA
-Integracao Lab: Ollama (analise), n8n (pipelines), MariaDB/PostgreSQL, Redis, Prometheus/Grafana, Tailscale
+Integracao Lab: Ollama (analise), n8n (pipelines), MariaDB/PostgreSQL/ClickHouse, Redis, Prometheus/Grafana, Tailscale
 
 ## Visao Geral
 
 Projetos multi-linguagem processando datasets reais NASA para portfolio tecnico:
-- FIRMS: Deteccao de incêndios em tempo real (satellite MODIS/VIIRS)
+- FIRMS: Deteccao de incendios em tempo real (satellite MODIS/VIIRS)
 - NEO: Asteroides proximos da Terra (JPL CNEOS)
 - Mars Rover: Fotos Curiosity/Perseverance (NASA PDS)
 - Climate: Dados temperatura/CO2 (GISS, GES DISC)
@@ -64,8 +64,8 @@ cp .env.lab .env
 | Climate SQL | SQL/C++ | 1M rows/s | 10ms | DataGrip + CLion |
 | Exoplanet API | Java/TS | 10k req/s | 30ms | IntelliJ + WebStorm |
 
-Testado em: Orange Pi 5 (RK3588, 8-core ARM64, 16GB RAM)
-IDEs: 10x JetBrains 2026.2 | OS: Ubuntu 24.04
+> **Hardware de teste**: Daten DQ170UP (Intel Core i5-7600T 2.8GHz, 15GB RAM, Ubuntu 24.04 LTS)
+> **IDEs**: 10x JetBrains 2026.2 | **OS**: Ubuntu 24.04 LTS
 
 ## Estrutura do Projeto
 
@@ -163,6 +163,6 @@ cd exoplanet-explorer/ts-frontend && npm test
 ---
 
 Desenvolvido com 10 IDEs JetBrains 2026.2 + Educational Pack BD24G146N7
-Testado no IDT-Lab (MariaDB + PostgreSQL + ClickHouse + Redis + Prometheus + Grafana + Ollama + n8n + Tailscale)
+Lab-tested on IDT-Lab (Daten DQ170UP + MariaDB + PostgreSQL + ClickHouse + Redis + Prometheus + Grafana + Ollama + n8n + Tailscale)
 Dados: NASA FIRMS, JPL CNEOS, NASA PDS, GISS, NASA Exoplanet Archive (APIs publicas gratuitas)
-Parte do Portfolio JetBrains IDE
+Parte do JetBrains IDE Portfolio
